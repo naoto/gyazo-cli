@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -z $GYAZO_PATH ]; then
+  echo 'export GYAZO_PATH=http://gyazo.com/'
+  exit 1;
+fi
+
+curl $GYAZO_PATH -F imagedata=@$1
